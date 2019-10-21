@@ -72,8 +72,14 @@ var strArr = ['hello', 'world', 'whirled', 'peas'];
 uppercaseAll(strArr); ==> [ 'HELLO', 'WORLD', 'WHIRLED', 'PEAS' ]
 */
 
+// Done
+var strArr = ['hello', 'world', 'whirled', 'peas'];
+
 function uppercaseAll(arrayOfStrings) {
-  // TODO: your code here
+  return map (arrayOfStrings, function(element, i){
+  	return arrayOfStrings[i].toUpperCase();
+  });
+  return arrayOfStrings;
 }
 
 //=============================================================================
@@ -111,8 +117,13 @@ var data = [
   }
 ];
 
+// i think there is a small bug but i couldn't find it
 function highestPopulation(arrayOfObjects) {
-  // TODO: your code here
+	var max = arrayOfObjects[0].population;
+  return filter (arrayOfObjects, function(element, i){
+  	return arrayOfObjects[i]['population'] > max;
+  });
+  return arrayOfObjects;
 }
 
 //=============================================================================
@@ -131,8 +142,14 @@ halveAll(numsArray); ==> [ 1, 3, 10, 4, 7 ]
 Note: please write one or two lines here describing your solution.
 */
 
+// Done
+var numsArray = [2, 6, 20, 8, 14];
+
 function halveAll(numbers) {
-  // your code is here
+  return map (numbers, function(element, i){
+  	return numbers[i] / 2;
+  });
+  return numbers;
 }
 
 //=============================================================================
@@ -147,8 +164,17 @@ values({first : 5, second: 'something' , third : 129}) ==> [5, 'something', 129]
 
 Note: please write one or two lines here describing your solution.
 */
+
+// not finished !!
+var vals = {first : 5, second: 'something' , third : 129};
+
 function values(obj) {
-  // TODO: your code here
+	var arrOfVal = [];
+
+  return each (obj, function(obj, key){
+  	return arrOfVal.push(obj[key]);
+  });
+  return arrOfVal;
 }
 
 //Good Luck :))
